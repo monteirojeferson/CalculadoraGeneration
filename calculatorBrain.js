@@ -1,4 +1,8 @@
 var result = document.getElementById("result");
+// Variaveis globais
+var n1=0, n2=0;
+var operacao="";
+
 
 function onNumberClicked(numberButton){
     
@@ -15,24 +19,76 @@ function onClearClicked(){
 }
 
 function onEqualsClicked(){
-    //TODO implement this function
+    
+    n2=parseFloat(result.innerHTML) //atribuição e conversão para número
+    if(operacao=="+"){
+        result.innerHTML=n1+n2;
+    }
+    if (operacao=="-"){
+        result.innerHTML=n1-n2;
+    }
+    if (operacao=="*"){
+        result.innerHTML=n1*n2;
+    }
+    if (operacao=="/"){
+        if(n2>0){
+        result.innerHTML=n1/n2;
+    }else{
+        alert("Impossivel divisão por 0")
+    }
+}
+    // operacao= operacao
+    
+
+    // result.innerHTML= operacao 
 }
 
 function onDivideClicked(){
-    //TODO implement this function
-}
+    n1=parseInt(result.innerHTML) 
+    operacao="/";
+    result.innerHTML=0
+    // n1=parseInt(result.innerHTML)
+    // n2=parseInt(result.innerHTML)
+    // operacao=n1/n2
+    
+    // return operacao;
+ }
 
 
 
 function onAddClicked(){
-    //TODO implement this function
+    n1=result.innerHTML
+    n1=parseInt(n1)
+    operacao="+";
+    result.innerHTML=0
+    // n1=parseInt(result.innerHTML)
+    // n2=parseInt(result.innerHTML)
+    // operacao=n1+n2
+    
+    // return operacao;
+    // result.innerHTML =operacao
+    // parseInt(operacao=(n1+n2))
 }
 
 function onSubtractClicked(){
-    //TODO implement this function
+    n1=parseInt(result.innerHTML) 
+    operacao="-";
+    result.innerHTML=0
+    // n1=parseInt(result.innerHTML)
+    // n2=parseInt(result.innerHTML)
+    // operacao=n1-n2
+    
+    // return operacao;
+    // result.innerHTML = operacao
+    // parseInt(resultado=(n1-n2))
 }
-
 function onMultiplyCliked(){
-    //TODO implement this function
+    n1=parseInt(result.innerHTML) 
+    operacao="*";
+    result.innerHTML=0
+    // n1=parseInt(result.innerHTML)
+    // n2=parseInt(result.innerHTML)
+    // operacao=n1*n2
+    
+    // return operacao;
 }
-
